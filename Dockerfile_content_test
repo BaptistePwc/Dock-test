@@ -1,0 +1,4 @@
+FROM python:3.9
+COPY content_test.py .
+RUN apt-get update && apt-get install -y python3-pip && pip3 install requests os
+CMD ["python", "content_test.py"]
