@@ -12,6 +12,14 @@ services:
       - api
     volumes:
       - ./logs:/app/logs
+  authorization_test:
+    build:
+      context: .
+      dockerfile: Dockerfile_authorization_test
+    depends_on:
+      - api
+    volumes:
+      - ./logs:/app/logs
   content_test:
     build:
       context: .
