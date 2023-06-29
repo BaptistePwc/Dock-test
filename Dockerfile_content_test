@@ -1,4 +1,6 @@
 FROM python:3.9
 COPY content_test.py .
-RUN apt-get update && apt-get install -y python3-pip && pip3 install requests os
-CMD ["python", "content_test.py"]
+RUN apt-get update && apt-get install -y python3-pip 
+RUN pip3 install requests
+EXPOSE 8000
+RUN python3 content_test.py

@@ -46,3 +46,7 @@ print(output_v1.format(status_code=status_code_v1, test_status=test_status_v1))
 if os.environ.get('LOG') == '1':
     with open('api_test.log', 'a') as file:
         file.write(output_v1)
+
+'''
+CMD ["python", "authorization_test.py"]
+'''

@@ -46,6 +46,10 @@ else:
 print(output.format(status_code=status_code, test_status=test_status))
 
 # impression dans un fichier
-if os.environ.get('LOG') == 1:
+if os.environ.get('LOG') == '1':
     with open('api_test.log', 'a') as file:
         file.write(output)
+
+'''
+CMD ["python", "content_test.py"]
+'''
