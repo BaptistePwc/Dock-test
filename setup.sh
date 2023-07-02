@@ -1,3 +1,6 @@
+LOGS_DIR="logs"
+LOG_FILE="$LOGS_DIR/logs.txt"
+exec > >(tee -a "$LOG_FILE") 2>&1
 # Arrête et supprime les conteneurs existants
 docker-compose down
 #création du network

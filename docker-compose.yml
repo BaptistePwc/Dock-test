@@ -10,6 +10,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_authentication_test
+    depends_on:
+      - api
     networks:
       - my_network
     volumes:
@@ -18,6 +20,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_authorization_test
+    depends_on:
+      - api
     networks:
       - my_network
     volumes:
